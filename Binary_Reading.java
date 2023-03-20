@@ -72,7 +72,7 @@ public class Binary_Reading {
 			 bw.write("# Number of data set = "+datasets+"\n");
 			 
 			 
-			int safe_buffer=500;
+			int safe_buffer=1000;
 			float[][] output=new float[datasets+safe_buffer][data_record_length+2];
 			 
 			 for(int i=head_length;i<data.length-3;i=i+4) {				 
@@ -80,8 +80,11 @@ public class Binary_Reading {
 				 int index=Math.max(((i-head_length)/4)%(data_record_length+2), 0);				 
 				 byte[] temp= {data[i],data[i+1],data[i+2],data[i+3]};				
 				 output[set][index]=ByteBuffer.wrap(temp).order(ByteOrder.LITTLE_ENDIAN).getFloat();
-			 }			 
-			 for(int i=0;i<datasets;i++) {
+			 }
+			 for(int i=0;i<datasets+safe_buffer;i++) {
+				 if(output[i][0]==0) {
+					 break;
+				 }
 				 bw.write("Frequency: "+ output[i][0]);
 				 bw.write(" Amplitude: "+ output[i][1]+"\n");
 				 for(int j=2;j<output[0].length;j++) {
