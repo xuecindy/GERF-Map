@@ -15,7 +15,7 @@ def list_directory_contents(directory):
         print("Directory not found.")
 
 # Replace 'directory_path' with the path to the directory you want to list
-directory_path = '/work/zhoulong/HL/'
+directory_path = '/home/wenyue.xue/HearingLoss/'
 list_directory_contents(directory_path)
 
 
@@ -91,7 +91,7 @@ def load_data_and_labels(folder_path):
 # In[6]:
 
 
-X,Y =load_data_and_labels('/work/zhoulong/HL/Time_CSV/')
+X,Y =load_data_and_labels('/home/wenyue.xue/HearingLoss/Time_CSV/')
 print(X.shape)
 X_reshaped = X[:, :, :, np.newaxis]
 
