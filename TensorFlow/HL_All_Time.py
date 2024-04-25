@@ -15,7 +15,7 @@ def list_directory_contents(directory):
         print("Directory not found.")
 
 # Replace 'directory_path' with the path to the directory you want to list
-directory_path = '/work/zhoulong/HL/'
+directory_path = '/home/wenyue.xue/HearingLoss/'
 list_directory_contents(directory_path)
 
 
@@ -96,7 +96,7 @@ def load_data_and_labels(folder_path):
 # In[ ]:
 
 
-X,Y =load_data_and_labels('/work/zhoulong/HL/Time_CSV/')
+X,Y =load_data_and_labels('/home/wenyue.xue/HearingLoss/Time_CSV/')
 print(X.shape)
 X_reshaped = X[:, :, :, np.newaxis]
 
@@ -304,7 +304,7 @@ kf = KFold(n_splits=k, shuffle=False)
 all_folds_history  = []  # To store history for each fold
 accuracy_scores_k = []
 heatmaps = []
-save_path = '/work/zhoulong/HL/AllTimeHeat/'
+save_path = '/home/wenyue.xue/HearingLoss/AllTimeHeat/'
 #test_accuracy_scores_k = []
 for fold_index, (train_index, test_index) in enumerate(kf.split(X), start=1):
     X_train, X_test = X[train_index], X[test_index]
