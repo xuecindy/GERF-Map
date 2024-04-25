@@ -15,7 +15,7 @@ def list_directory_contents(directory):
         print("Directory not found.")
 
 # Replace 'directory_path' with the path to the directory you want to list
-directory_path = '//home/wenyue.xue/HearingLoss'
+directory_path = '/home/wenyue.xue/HearingLoss'
 list_directory_contents(directory_path)
 
 
@@ -254,8 +254,8 @@ import pandas as pd
 import cv2
 
 #Loop Through Each Subfolder
-base_folder = '//home/wenyue.xue/HearingLossTime_CSV/'  # The folder where your T=0, T=1, ..., T=99 folders are located
-Save_folder = '//home/wenyue.xue/HearingLossEachTime/'
+base_folder = '/home/wenyue.xue/HearingLossTime_CSV/'  # The folder where your T=0, T=1, ..., T=99 folders are located
+Save_folder = '/home/wenyue.xue/HearingLossEachTime/'
 average_accuracies = {}  # Keys are T{i}, values are the corresponding average accuracies
 
 for i in range(0,100):  # Assuming subfolders are named 'T=0' through 'T=99'
@@ -334,8 +334,8 @@ import pandas as pd
 import cv2
 
 #Loop Through Each Subfolder
-base_folder = '//home/wenyue.xue/HearingLossTime_CSV/'  # The folder where your T=0, T=1, ..., T=99 folders are located
-Save_folder = '//home/wenyue.xue/HearingLossEachTime/'
+base_folder = '/home/wenyue.xue/HearingLossTime_CSV/'  # The folder where your T=0, T=1, ..., T=99 folders are located
+Save_folder = '/home/wenyue.xue/HearingLossEachTime/'
 average_accuracies = {}  # Keys are T{i}, values are the corresponding average accuracies
 
 for i in range(0,100):  # Assuming subfolders are named 'T=0' through 'T=99'
